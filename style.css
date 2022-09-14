@@ -1,0 +1,60 @@
+            body {
+                font-family: 'Open Sans', sans-serif;
+                text-align: center;
+            }
+
+            .oben {
+                display: flex;
+                justify-content: center;
+                width: 1000px;
+                height: 50px;
+            }
+
+            .links {
+                width: 500px;
+            }
+
+            .rechts {
+                width: 500px;
+            }
+
+            .addbutton {
+                font-family: 'Open Sans', sans-serif;
+                height: 40px;
+                width: 100px;
+            }
+
+            .eingabefeld {
+                font-family: 'Open Sans', sans-serif;
+                height: 40px;
+                width: 350px;
+            }
+
+            .unten {
+                width: 1000px;
+                padding-top: 50px;
+            }
+
+            .tabelle {
+                width: 1000px;
+                border-collapse: collapse;
+            }
+
+
+            .kopfzeile {
+                height: 50px;
+            }
+
+            .kopf {
+                width: 500px;
+            }
+
+            .donebutton {
+                width: 20px;
+                height: 20px;
+            }
+
+            .listelement {
+                padding-top: 25px;
+            }
+        

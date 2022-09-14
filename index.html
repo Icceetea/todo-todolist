@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ToDo-Liste</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>    
+        <body> 
+            <div id="div1" class="oben">           
+                <div id="div1.1" class="links">
+                    <p>ToDo-Liste</p>
+                </div>
+                <div id="div1.2" class="rechts">
+                    <input class="eingabefeld" type="text" id="input" placeholder="Was gibt's zu tun?">
+                    <button class="addbutton" type="button" id="addbutton">Add</button>                    
+                </div>
+            </div>
+            <div id="div2" class="unten">
+                <table id="tablehead" class="tabelle" border="1" frame="below">
+                    <tr class="kopfzeile">
+                        <td>
+                            <table width="500px">
+                                <td>
+                                    <th class="kopf">Done</th>
+                                </td>
+                            </table>
+                        </td>
+                        <td>
+                            <table width="500px">
+                                <td>
+                                    <th class="kopf">Not Done</th>
+                                </td>
+                            </table>
+                        </td>
+                    </tr>    
+                </table>
+                <table id="tablebody" class="tabelle" border="1" frame="void" rules="cols">
+                    <tr class="kopfzeile">
+                        <td>
+                            <table width="500px">
+                                <td>
+                                    <ul id="done"></ul>
+                                </td>
+                            </table>
+                        </td>
+                        <td>
+                            <table width="500px">
+                                <td>
+                                    <ul id="notdone"></ul>
+                                </td>
+                            </table>
+                        </td>
+                    </tr>    
+                </table>
+            </div>
+            <script src="index.js"></script>
+        </body>    
+</html>
