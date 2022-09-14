@@ -122,6 +122,7 @@ add_button.addEventListener("click", function(){
                 }
                 todolist.delete(newtodoinnen.innerText);
                 notdone.removeChild(newtodoaussen);
+                console.log(todolist);
             });
     todo_input.value = "";
 })
