@@ -42,6 +42,7 @@ class Todolist {
         if (todo.task !== newtask) {
         todo.task = newtask;
         }
+        else throw new Error("same Todo")
     }
 
     public delete (task:string): void {
@@ -119,10 +120,18 @@ add_button.addEventListener("click", function(){
                 prevent = true;
                 if (!newtodoaussen.parentElement){
                     throw new Error("something went wrong ):");
+                }                
+                let todo = todolist.todos.find(todo => todo.task === newtodoinnen.innerText);
+                if (!todo){
+                    throw new Error("something went wrong ):");
                 }
-                todolist.delete(newtodoinnen.innerText);
-                notdone.removeChild(newtodoaussen);
-                console.log(todolist);
+                if (todo.state === false){
+                    notdone.removeChild(newtodoaussen);
+                }
+                else{
+                    done.removeChild(newtodoaussen);
+                }
+                todolist.delete(newtodoinnen.innerText);                
             });
     todo_input.value = "";
 })

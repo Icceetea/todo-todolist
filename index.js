@@ -32,6 +32,8 @@ class Todolist {
         if (todo.task !== newtask) {
             todo.task = newtask;
         }
+        else
+            throw new Error("same Todo");
     }
     delete(task) {
         const todo = this.todos.find(todo => todo.task === task);
@@ -108,9 +110,17 @@ add_button.addEventListener("click", function () {
         if (!newtodoaussen.parentElement) {
             throw new Error("something went wrong ):");
         }
+        let todo = todolist.todos.find(todo => todo.task === newtodoinnen.innerText);
+        if (!todo) {
+            throw new Error("something went wrong ):");
+        }
+        if (todo.state === false) {
+            notdone.removeChild(newtodoaussen);
+        }
+        else {
+            done.removeChild(newtodoaussen);
+        }
         todolist.delete(newtodoinnen.innerText);
-        notdone.removeChild(newtodoaussen);
-        console.log(todolist);
     });
     todo_input.value = "";
 });
